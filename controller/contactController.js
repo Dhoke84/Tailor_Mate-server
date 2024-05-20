@@ -1,5 +1,5 @@
 import express from 'express';
-import { ContactModel } from '../models/Contact.js';
+import { ContactModel } from '../models/contact.js';
 
 const createContact = async (req, res) =>{
     const {name, email, phone, address, clothtype, charges, detailmessage} = req.body;

@@ -1,5 +1,5 @@
 import express from 'express';
-import { UserModel } from '../models/User.js';
+import { UserModel } from '../models/user.js';
 import { validationResult } from 'express-validator';
 import bcrypt from 'bcrypt';
 import  jwt  from 'jsonwebtoken';
@@ -75,4 +75,9 @@ const Login = async (req, res) =>{
 const Auth = (req, res) =>{
     return res.status(200).json({success:true, user: {...req.user._doc}})
 }
+
+
+
 export {Register, Login, Auth}
+
+

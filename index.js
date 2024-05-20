@@ -8,11 +8,7 @@ import { Router } from './routes/routes.js';
 
 const app = express();
 app.use(express.json())
-app.use(cors({
-    origin: ["https://tailor-mate-client.vercel.app/"],
-    methods: ["GET" , "POST", "PUT", "DELETE"],
-    credentials: false
-}))
+app.use(cors())
 
 dotenv.config({path: "./config/.env"})
 

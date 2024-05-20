@@ -1,5 +1,5 @@
 import express from 'express';
-import { Login, Register , Auth} from '../controller/userController.js';
+import { Login, Register , Auth } from '../controller/userController.js';
 import { body } from 'express-validator';
 import { VerifyUser } from '../middleware/VerifyUser.js';
 import { createContact, getContacts , getContact, updateContact, deleteContact} from '../controller/contactController.js';
@@ -29,4 +29,5 @@ router.get('/contacts',VerifyUser , getContacts)
 router.get('/contact/:id',VerifyUser , getContact)
 router.put('/update-contact/:id',VerifyUser , updateContact)
 router.delete('/contact/:id',VerifyUser , deleteContact)
+
 export {router as Router}
